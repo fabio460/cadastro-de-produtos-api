@@ -3,5 +3,7 @@
       "deploymentEnabled": {
         "main": false
       }
-    }
+    },
+    "version": 2
+
   }
