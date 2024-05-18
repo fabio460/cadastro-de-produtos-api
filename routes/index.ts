@@ -1,6 +1,6 @@
-import { Router } from "express";
-import { getProduto } from "../controllers/produtos";
-
-const route = Router()
-route.get("/produtos",getProduto)
-export default route
+import { listRouterType } from "../types";
+import produtoRouter from "./produtoRouter";
+const listRouter:listRouterType = [
+   {endpoint:"/produtos",rota:produtoRouter}
+]
+export default listRouter
