@@ -5,3 +5,4 @@ export const listar = async(req:Request, res:Response)=>{
     const r = await prisma.produto.findMany()
     res.json(r)
 }
+
