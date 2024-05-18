@@ -30,11 +30,12 @@ export const criar = async(req:Request, res:Response)=>{
 
 export const atualizar = async(req:Request, res:Response)=>{
     const {id,nome,preco,imagem} = req.body
+    console.log("teste")
     try {
-        const r = await prisma.produto.update({
+        const r = await prisma.produto.updateMany({
            data:{
               nome,
-              preco,
+              preco,    
               imagem
            },
            where:{id}
@@ -55,6 +56,6 @@ export const deletar = async(req:Request, res:Response)=>{
         res.send("Produto deletado com sucesso!")
         
     } catch (error) {
-        res.status(500).send(error)
+        res.status(500).send("Falha ao deletar produto")
     }
 }
